@@ -99,11 +99,11 @@ WSGI_APPLICATION = 'catcollector.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.config(     
-    default='postgresql://postgres:postgres@localhost:5432/testcats',        
-    conn_max_age=600)
-}
+# DATABASES = {
+#     'default': dj_database_url.config(     
+#     default='postgresql://postgres:postgres@localhost:5432/somecats',        
+#     conn_max_age=600)
+# }
 # THIS IS THE OLD ONE
 # DATABASES = {
 #     'default': {
@@ -111,7 +111,16 @@ DATABASES = {
 #         'NAME': 'testcats',
 #     }
 # }
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'neondb',
+        'USER': 'timmshinbone',
+        'PASSWORD': 'vxRMOS9Cu2bh',
+        'HOST': 'ep-spring-wildflower-061494.us-east-2.aws.neon.tech',
+        'PORT': '5432',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -141,7 +150,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_TZ = True
+# USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
