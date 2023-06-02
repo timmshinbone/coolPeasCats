@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+nav, .page-footer {
+  background-color: rgb(243, 184, 22)
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+span.card-title, p {
+  color: black
+}
+
+input.btn {
+  background-color: rgb(243, 184, 22)
+}
+
+footer {
+  padding-top: 0;
+  text-align: right;
+}
+
